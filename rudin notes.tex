@@ -1,0 +1,328 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, xpatch, amsthm, outlines, mathrsfs}
+%\usepackage{mathcal}
+\usepackage[utf8]{inputenc}
+
+\theoremstyle{plain}
+
+\makeatletter
+\xpatchcmd{\@thm}{\thm@headpunct{.}}{}{}
+
+%\newtheorem*{two_one_one_defa*}{Definition 2.1.1 (Supremum)}
+%\newtheorem*{two_one_one_defb*}{Definition 2.1.1 (Infimum)}
+%\newtheorem*{two_one_two_definition*}{Definition 2.1.2}
+%\newtheorem*{two_one_three_definition*}{Definition 2.1.3}
+%
+%\newtheorem*{two_one_one_theorem*}{Theorem 2.1.1}
+%\newtheorem*{two_one_two_theorem*}{Theorem 2.1.2}
+%
+%\newtheorem*{two_one_three_theorem*}{Theorem 2.1.3}
+%
+%
+%\newtheorem*{two_one_four_theorem*}{Theorem 2.1.4}
+%\newtheorem*{two_one_five_theorem*}{Theorem 2.1.5}
+%\newtheorem*{two_one_six_theorem*}{Theorem 2.1.6}
+%\newtheorem*{two_one_seven_theorem*}{Theorem 2.1.7}
+%
+%
+%\newtheorem*{lemma221*}{Lemma 2.2.1}
+%\newtheorem*{theorem221*}{Theorem 2.2.1}
+%%\newtheorem*{corollary221*}{Corollary 2.2.1}
+%
+%\newtheorem*{theorem222*}{Theorem 2.2.2}
+%\newtheorem*{theorem223*}{Theorem 2.2.3}
+%\newtheorem*{theorem224*}{Theorem 2.2.4}
+%
+%
+%\newtheorem*{corollary231*}{Corollary 2.3.1}
+%\newtheorem*{theorem231*}{Theorem 2.3.1}
+%\newtheorem*{theorem232*}{Theorem 2.3.2}
+%\newtheorem*{theorem233*}{Theorem 2.3.3}
+%
+%
+%%\newtheorem*[definition241*}{Definition 2.4.1}
+%\newtheorem*{definition241*}{Definition 2.4.1}
+%\newtheorem*{definition242*}{Definition 2.4.2}
+%
+%\newtheorem*{theorem241*}{Theorem 2.4.1}
+%\newtheorem*{theorem242*}{Theorem 2.4.2}
+%\newtheorem*{theorem243*}{Theorem 2.4.3}
+%\newtheorem*{theorem244*}{Theorem 2.4.4}
+%
+%\newtheorem*{def151*}{Definition 1.5.1}
+%\newtheorem*{theorem151*}{Theorem 1.5.1}
+%\newtheorem*{def152*}{Definition 1.5.2}
+%
+%\newtheorem*{def111*}{Definition 1.1.1 Countable and Uncountable}
+%
+
+\newtheorem*{def231*}{Definition 2.3.1 Open Cover of a Set}
+\newtheorem*{def232*}{Definition 2.3.2 Compact Set}
+
+\newtheorem*{def418*}{Definition 4.18 Uniformly Continuous Function}
+\newtheorem*{theorem419*}{Theorem 4.19}
+
+\newtheorem*{theorem423*}{Theorem 4.23 Intermediate Value Theorem}
+
+\newtheorem*{def61*}{Definition 6.1 Partition of a Closed Real Interval}
+\newtheorem*{def62*}{Definition 6.2}
+\newtheorem*{def63*}{Definition 6.3 Refinement of a Partition}
+\newtheorem*{theorem64*}{Theorem 6.4}
+\newtheorem*{theorem65*}{Theorem 6.5}
+\newtheorem*{theorem66*}{Theorem 6.6}
+\newtheorem*{theorem67*}{Theorem 6.7}
+\newtheorem*{theorem68*}{Theorem 6.8}
+\newtheorem*{theorem69*}{Theorem 6.9}
+\newtheorem*{theorem610*}{Theorem 6.10}
+\newtheorem*{theorem611*}{Theorem 6.11}
+\newtheorem*{theorem612*}{Theorem 6.12}
+\newtheorem*{theorem613*}{Theorem 6.13}
+\newtheorem*{def614*}{Definition 6.14 Unit Step Function}
+\newtheorem*{theorem615*}{Theorem 6.15}
+\newtheorem*{theorem616*}{Theorem 6.16}
+\newtheorem*{theorem617*}{Theorem 6.17}
+\newtheorem*{theorem619*}{Theorem 6.19 (Change of Variables)}
+\newtheorem*{theorem620*}{Theorem 6.20}
+\newtheorem*{theorem621*}{Theorem 6.21 Fundamental Theorem of Calculus}
+\newtheorem*{theorem622*}{Theorem 6.22 Integration by Parts}    
+\newtheorem*{theorem623*}{Theorem 6.23}
+\newtheorem*{theorem624*}{Theorem 6.24}
+\newtheorem*{theorem625*}{Theorem 6.25}
+\newtheorem*{theorem627*}{Theorem 6.27}
+
+\newtheorem*{def626*}{Definition 6.26 Rectifiable Curve}                
+
+
+\begin{document}
+
+\begin{def231*} $ \newline $
+Let $ X $ be a metric space. Let $ E \subseteq X $. Let $ \left\{G_{\alpha}\right\} \subseteq X $ be an indexed set family, the elements of which are open subsets of $ X $. $ \left\{ G_{\alpha}\right\} $ is an open cover of $ E $ when:
+$$ E \subseteq \bigcup_{\alpha} G_{\alpha} $$
+\end{def231*}
+
+
+
+
+\begin{def232*} $ \newline $
+Let $ X $ be a metric space. Let $ K \subseteq X $. $ K $ is compact if every open cover of $ K $ contains a finite subcover. That is, $ K $ is compact when the existence of an open cover implies the existence of a finite subcover:
+$$ K \subseteq \bigcup_{\alpha \in A} G_{\alpha} \implies \exists m : K \subseteq \bigcup_{j=1}^{m} G_{\alpha_{j}} $$  
+\end{def232*}
+
+$\newline$
+\begin{def418*} $\newline$
+Let $ X, Y $ be metric spaces. Let $ f : X \to Y $. $ f $ is uniformly continuous on $ X $ when:
+$$ \forall \epsilon > 0, \exists \delta > 0, \forall p, q \in X : d_{X}\left(p,q\right) < \delta \implies d_{Y}\left( f\left(p\right), f\left(q\right)\right) < \epsilon $$
+\end{def418*}
+
+$\newline$
+\begin{theorem423*} $\newline$
+Let $ f : \left[a,b\right] \to \mathbb{R} $ be continuous. \\
+If:
+\begin{align*}
+& 1. \hspace{.75 em} f\left(a\right) < f\left(b\right) \\
+& 2. \hspace{.75 em} \exists c \in \mathbb{R} : f\left(a\right) < c < f\left(b\right)
+\end{align*}
+Then:
+$$ \exists x \in \left(a,b\right) : c = f\left(x\right) $$
+\end{theorem423*}
+
+
+$\newline$
+\begin{theorem419*}
+Let $ X, Y $ be metric spaces, and assume $ X $ is compact. Let $ f : X \to Y $ be a continuous mapping. Then $ f $ is uniformly continuous on $ X $.
+\end{theorem419*}
+
+$\newline$
+\begin{def61*} Let $ \left[a,b\right] \subseteq \mathbb{R} $. A partition of $ \left[a,b\right]$ is a finite set of points $ \left\{x_{0}, \ldots, x_{n}\right\} $, where
+$$ a = x_{0} \leq x_{1} \leq \ldots \leq x_{n} = b \quad ; \quad \Delta x_{i} = x_{i} - x_{i-1} $$
+Let $ f : \left[a,b\right] \to \mathbb{R} $ be a bounded function. To each partition $ P $ of $ \left[a,b\right] $, we define:
+
+\begin{align*}
+& U\left(P,f\right) = \sum_{i=1}^{n} M_{i} \Delta x_{i} \quad ; \quad M_{i} = \text{\rm{sup}} \left\{ f\left(x\right) : x \in \left[x_{i-1},x_{i}\right] \right\} \\
+& L\left(P,f\right) = \sum_{i=1}^{n} m_{i} \Delta x_{i} \quad ; \quad m_{i} = \text{\rm{inf}} \left\{ f\left(x\right) : x \in \left[x_{i-1},x_{i}\right] \right\} \\
+& \overline{\int_{a}^{b}} f d\alpha = \text{\rm{inf }} U\left(P,f\right) \\
+& \underline{\int_{a}^{b}} f d\alpha = \text{\rm{sup }} L\left(P,f\right) 
+\end{align*}
+\end{def61*}
+
+
+$\newline$
+\textbf{Function Assumptions for Stieljes Integral}
+\begin{align*}
+& \text{\rm{1. }} f : \left[a,b\right] \to \mathbb{R}  \\
+& \text{\rm{2. }} f\text{\rm{ is bounded }} \\
+& \text{\rm{3. }} \alpha : \left[a,b\right] \to \mathbb{R} \text{\rm{ is monotonically increasing }} \\
+\end{align*}
+
+$\newline$
+\textbf{Definition: Riemann Integrable Function} \\
+Let $ f : \left[a,b\right] \to \mathbb{R} $, and let $ P = \left\{a = x_{0} \leq x_{1} \leq \ldots \leq x_{n} = b \right\} $. $ f $ is Riemann integrable when its lower and upper Riemann integrals are equal:
+$$ f \in \mathscr{R} \Longleftrightarrow \underline{\int_{a}^{b}} f d\alpha = \overline{\int_{a}^{b}} f d\alpha = \int_{a}^{b} f d\alpha $$
+
+
+$\newline$
+\begin{def63*} $\newline$
+Let $ P $ be a partition. $ P^{*} $ refines $ P $ if every point of $ P $ is also a point of $ P^{*} $:
+$$ P^{*} : P \subseteq P^{*} $$
+\end{def63*}
+
+$\newline$
+\textbf{Definition: Common Refinement of Multiple Partitions} \\
+Let $ P_{1} $ and $ P_{2} $
+
+
+
+$\newline$
+\begin{theorem64*} If $ P^{*} $ is a refinement of $ P $, then:
+$$ L\left(P, f, \alpha\right) \leq L\left(P^{*}, f, \alpha\right) \quad\text{\rm{ and }} \quad U\left(P^{*}, f, \alpha\right) \leq U\left(P,f,\alpha\right) $$
+\end{theorem64*}
+
+$\newline$
+\begin{theorem65*} $ \underline{ \int_{a}^{b} } f d\alpha \leq \overline{ \int_{a}^{b} } f d\alpha $ \end{theorem65*}
+
+$\newline$
+\begin{theorem66*} $ f \in \mathscr{R} $ on $ \left[a.b\right] $ if and only if for every $ \epsilon > 0 $, there exists a partition $ P $ such that:
+$$ U\left(P,f,\alpha\right) - L\left(P,f,\alpha\right) < \epsilon $$
+\end{theorem66*}
+
+$\newline$
+\begin{theorem68*} If $ f $ is continuous on $ \left[a,b\right] $, then $ f \in \mathscr{R}\left(\alpha\right) $ on $ \left[a,b\right] $.
+\end{theorem68*}
+
+
+$\newline$
+\begin{theorem69*}
+If $ f $ is monotonic on $ \left[a,b\right] $, and if $ \alpha $ is continuous on $ \left[a,b\right] $, then $ f \in \mathscr{R}\left(\alpha\right) $.
+\end{theorem69*}
+
+
+
+\begin{theorem610*}
+Suppose $ f $ is bounded on $ \left[a,b\right]$, $ f $ is continuous almost everywhere on $ \left[a,b\right] $, and $ \alpha $ is continuous at every point at which $ f $ is discontinuous. Then $ f $ is Riemann integrable.
+\end{theorem610*}
+
+
+\begin{theorem611*}
+Suppose $ f \in \mathscr{R}\left(\alpha\right) $ on $ \left[a,b\right] $, $ f \in \left[m,M\right] $, $ \phi $ is continuous on $ \left[m,M\right] $, and $ h\left(x\right) = \phi\left(f\left(x\right)\right) $ on $ \left[a,b\right] $. Then $ h \in \mathscr{R}\left(\alpha\right) $ on $ \left[a,b\right]$.
+\end{theorem611*}
+
+\newpage
+
+\begin{theorem612*} $\newline$
+(a) 
+\begin{align*}
+& f_{1} \in \mathscr{R}\left(\alpha\right)_{\left[a,b\right]} \land f_{2} \in \mathscr{R}\left(\alpha\right)_{\left[a,b\right]} \implies \left(f_{1} + f_{2}\right) \in \mathscr{R}\left(\alpha\right)_{\left[a,b\right]} \land \int_{a}^{b} \left(f_{1} + f_{2}\right) d\alpha = \int_{a}^{b} f_{1} d\alpha + \int_{a}^{b} f_{2} d\alpha \\
+& f \in \mathscr{R}\left(\alpha\right)_{\left[a,b\right]} \implies \forall c \in \mathbb{R} : \left(cf\right) \in \mathscr{R}\left(\alpha\right)_{\left[a,b\right]} \land \int_{a}^{b} \left(cf\right) d\alpha = c \int_{a}^{b} f d\alpha
+\end{align*}
+
+\noindent (b)
+\begin{align*}
+& \forall x \in \left[a,b\right] : f_{1}\left(x\right) \leq f_{2}\left(x\right) \implies \int_{a}^{b} f_{1} d\alpha \leq \int_{a}^{b} f_{2} d\alpha
+\end{align*}
+
+\noindent (c) If $ f \in \mathscr{R}\left(\alpha\right)_{\left[a,b\right]} $, and $ c \in \left(a,b\right) $, then: \\
+\begin{align*}
+& \text{\rm{1. }} f \in \mathscr{R}\left(\alpha\right)_{\left[a,c\right]} \\
+& \text{\rm{2. }} f \in \mathscr{R}\left(\alpha\right)_{\left[c,b\right]} \\
+& \text{\rm{3. }} \int_{a}^{c} f d\alpha + \int_{c}^{b} f d\alpha = \int_{a}^{b} f d\alpha
+\end{align*}
+
+
+\noindent (d) $$ f \in \mathscr{R}\left(\alpha\right)_{\left[a,b\right]} \land \exists M \in \mathbb{R^{+}} : | f\left(x\right) | \leq M \implies \bigg\lvert \int_{a}^{b} f d\alpha \bigg\rvert \leq M \cdot \left(\alpha\left(b\right) - \alpha\left(a\right) \right)$$ \\
+(e)
+\begin{align*}
+& f \in \mathscr{R}\left(\alpha_{1}\right) \land f \in \mathscr{R}\left(\alpha_{2}\right) \implies f \in \mathscr{R}\left(\alpha_{1} + \alpha_{2}\right) \land \int_{a}^{b} f d\left( \alpha_{1} + \alpha_{2} \right) = \int_{a}^{b} f d\alpha_{1} + \int_{a}^{b} f d\alpha_{2} \\
+& \forall c \in \mathbb{R} : f \in \mathscr{R}\left(\alpha\right) \implies f \in \mathscr{R}\left(c\alpha\right) \land \int_{a}^{b} f d\left(c\alpha\right) = c \int_{a}^{b} f d\alpha
+\end{align*}
+
+\end{theorem612*}
+
+\newpage
+
+\begin{theorem613*} If $ f \in \mathscr{R}\left(\alpha\right) $ and $ g \in \mathscr{R}\left(\alpha\right) $ on $ \left[a,b\right] $, then:
+\begin{align*}
+& \text{\rm{1. }} fg \in \mathscr{R}\left(\alpha\right) \\
+& \text{\rm{2. }} | f | \in \mathscr{R} \left(\alpha\right) \text{ and } \bigg\lvert \int_{a}^{b} f d\alpha \bigg\rvert \leq \int_{a}^{b} | f | d\alpha
+\end{align*}
+
+\end{theorem613*}
+
+%\begin{equation*}
+%F \left(x\right) := \left\{
+%	\begin{array}{ll}
+%		\int\limits_{a}^{x} f\left(t\right) dt  & ; \quad x \in \left[a,b\right] \vspace{.15 em} \\
+%		0 & ; \quad \text{\rm{else}}
+%	\end{array}
+%\right.
+%\end{equation*}
+\begin{def614*} $ \newline $
+\begin{equation}
+I\left(x\right) = \left\{
+	\begin{array}{ll}
+		0 & ; \quad x \leq 0 \\
+		1 & ; \quad x > 0
+	\end{array}
+\right.
+\end{equation}
+\end{def614*}
+
+\begin{theorem615*} If $ a < s < b $, $ f $ is bounded on $ \left[a,b\right] $, $ f $ is continuous at $ s $, and $ \alpha\left(x\right) = I\left(x-s\right) $, then:
+$$ \int_{a}^{b} f d\alpha = f\left(s\right) $$
+\end{theorem615*}
+
+
+
+\begin{theorem616*} $ \newline $
+Suppose:
+\begin{align*}
+& \text{\rm{1. }} \forall n \in \mathbb{Z}^{+} : c_{n} \geq 0 \\
+& \text{\rm{2. }} \sum c_{n} \text{\rm{ convergent }} \\
+& \text{\rm{3. }} \left\{s_{n}\right\} \subseteq \left(a,b\right) \text{\rm{ sequence of distint points }} \\
+& \text{\rm{4. }} \alpha\left(x\right) = \sum_{n=1}^{\infty} c_{n} \cdot I\left(x-s_{n}\right) \\
+& \text{\rm{5. }} f \text{ \rm{ is continuous on }} \left[a, b\right]
+\end{align*}
+Then:
+$$ \int_{a}^{b} f d\alpha = \sum_{n=1}^{\infty} c_{n} \cdot f\left(s_{n}\right) $$
+\end{theorem616*}
+
+\begin{theorem617*} $ \newline $
+Suppose:
+\begin{align*}
+& \text{ \rm{1. }} \alpha \text{\rm{ monotonic nondecreasing }} \\
+& \text{ \rm{1. }} \alpha' \in \mathscr{R} \text{\rm{ on }} \left[a,b\right] \\
+& \text{ \rm{3. }} f : \left[a,b\right] \to \mathbb{R} \text{\rm{ bounded }}
+\end{align*}
+Then:
+$$ f \in \mathscr{R} \left(\alpha\right) \Longleftrightarrow f\alpha' \in \mathscr{R} $$
+Consequently, we write:
+$$ \int_{a}^{b} f d\alpha = \int_{a}^{b} f\left(x\right) \alpha'\left(x\right) dx $$
+\end{theorem617*}
+
+
+
+\begin{theorem622*}
+Suppose $ F $ and $ G $ are differentiable functions on $ \left[a,b\right] $, $ F' = f, G' = g $. Assume $ f \in \mathscr{R} $ and $ g \in \mathscr{R} $. Then:
+$$
+\int_{a}^{b} F\left(x\right) g\left(x\right) dx = F\left(b\right)G\left(b\right) - F\left(a\right)G\left(a\right) - \int_{a}^{b} f\left(x\right) G\left(x\right) dx
+$$
+
+\end{theorem622*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
